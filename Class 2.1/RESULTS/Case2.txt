@@ -1,0 +1,12 @@
+<OOV>: 1
+i: 2
+today: 3
+am: 4
+happy: 5
+very: 6
+sad: 7
+feel: 8
+taking: 9
+a: 10
+walk: 11
+outside: 12

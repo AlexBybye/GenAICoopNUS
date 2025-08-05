@@ -1,0 +1,6 @@
+i: 1
+am: 2
+very: 3
+today: 4
+happy: 5
+sad: 6
