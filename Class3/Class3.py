@@ -172,7 +172,7 @@ num_epochs = 100
 
 # let's go back to our slides to discuss the rest of the code here
 callbacks = [
-    keras.callbacks.ModelCheckpoint('bag_of_words_model', save_best_only = True)
+    keras.callbacks.ModelCheckpoint('RESULTS/bag_of_words_model', save_best_only = True)
 ]
 
 model.fit(arr_train_reviews, arr_train_labels, epochs = num_epochs, batch_size = 32,
@@ -185,7 +185,7 @@ model.fit(arr_train_reviews, arr_train_labels, epochs = num_epochs, batch_size =
 # We notice that the losses are relatively high at around 0.75 for the validation set, and an
 # accuracy of 0.49
 # load our saved model from training
-model = keras.models.load_model('bag_of_words_model')
+model = keras.models.load_model('RESULTS/bag_of_words_model')
 
 # we apply the model on the test set, using evaluate()
 print(f"Test acc: {model.evaluate(arr_test_reviews, arr_test_labels)[1]:.3f}")
