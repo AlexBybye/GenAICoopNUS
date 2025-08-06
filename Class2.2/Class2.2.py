@@ -9,7 +9,7 @@ import numpy as np
 train_set = tfds.as_numpy(tfds.load('imdb_reviews', split="train"))
 
 # check how many reviews we have
-len(train_set)
+print(len(train_set))
 
 # create an empty list to store all the raw reviews
 raw_imdb_reviews = []
@@ -22,7 +22,7 @@ for review in train_set:
 # we take a look at the first review, prior to cleaning
 # Python indices start from 0
 
-raw_imdb_reviews[1]
+print(raw_imdb_reviews[1])
 
 # import the packages for removing punctuation and html tags
 # the BeautifulSoup class
@@ -87,13 +87,13 @@ for review in train_set:
     # add the cleaned review to our big aggregated review
     big_imdb_reviews += filtered_review
 
-imdb_reviews[0]
+print(imdb_reviews[0])
 # comparing the result here with the result from before, we see that it's much better here
 # with respect to standardisation, removal of punctuation, HTML tags, stopwords
 # since we are preparing the text for predicting sentiment, that it is less readable is not as
 # much of a concern (more on that later)
 # we look at the first 1000 characters in our big aggregated movie review
-big_imdb_reviews[:1000]
+print(big_imdb_reviews[:1000])
 # we set a limit of 20000 words for our vocabulary, and specify the OOV token
 # Recall that this means we keep the 19999 most common words, including the OOV token
 tokenizer = tf.keras.preprocessing.text.Tokenizer(num_words=20000, oov_token = '<OOV>')
@@ -113,7 +113,7 @@ sequences = tokenizer.texts_to_sequences(imdb_reviews)
 # print the tokenized first review
 print(sequences[0])
 # let's check how many words there are in our indexed vocabulary
-len(tokenizer.word_index)
+print(len(tokenizer.word_index))
 
 # Qn 5: Anything unusual we notice here? <see slides>
 
@@ -124,7 +124,7 @@ list_big_imdb_reviews = [big_imdb_reviews]
 aggregated_sequence = tokenizer.texts_to_sequences(list_big_imdb_reviews)
 
 # check the number of unique tokens in our aggregated review
-len(np.unique(aggregated_sequence))
+print(len(np.unique(aggregated_sequence)))
 
 # we see indeed that only 19999 unique tokens have been used to vectorize our sequences
 # Qn 6: Why isn't the limit imposed when we tokenize and index our corpus,
@@ -148,7 +148,7 @@ tokenizer.num_words = 10000
 aggregated_sequence = tokenizer.texts_to_sequences(list_big_imdb_reviews)
 
 # check the number of unique tokens in our aggregated review
-len(np.unique(aggregated_sequence))
+print(len(np.unique(aggregated_sequence)))
 
 # Do we see the expected result below?
 # say we are unhappy with the limit, and wish to up it to 20000
@@ -156,9 +156,9 @@ len(np.unique(aggregated_sequence))
 tokenizer.num_words = 20000
 
 aggregated_sequence = tokenizer.texts_to_sequences(list_big_imdb_reviews)
-len(np.unique(aggregated_sequence))
+print(len(np.unique(aggregated_sequence)))
 # length of the longest review
-len(max(sequences, key = len))
+print(len(max(sequences, key = len)))
 # find the location of the longest review, i.e. is it 5th review, the 90th review, etc
 # create an empty list to store the result
 long = []
@@ -169,7 +169,7 @@ for i in range(len(sequences)):
     if len(sequences[i]) == 1430:
         long.append(i)
 
-long
+print(long)
 # double check the review with index 3108
 len(sequences[3108])
 # import the tool needed for padding
@@ -184,28 +184,28 @@ print(padding)
 
 # now we see that the padding is done at the end
 # now all the sequences are the same shape, with 1430 tokens
-padding.shape
+print(padding.shape)
 # sometimes we might just want to set a max number of words for each review
 # since the sentiment or gist of each review can probably be gleaned from the first few words
 padding = pad_sequences(sequences, padding = 'post', maxlen = 600)
 print(padding)
 # we see that each of the 25000 rows has 600 tokens
-padding.shape
+print(padding.shape)
 # the truncating is actually done from the start, for reviews longer than 600 words
 # this is the index for the last word of the longest review (untruncated)
-sequences[3108][1429]
+print(sequences[3108][1429])
 # checking the truncated review, we see that the last word of the review 10194 still included
 # showing the truncating is at the start
-padding[3108]
+print(padding[3108])
 # now often the most important part of the review is at the start
 # so if there's any truncating, it should probably be done from the end of the review
 padding = pad_sequences(sequences, padding = 'post', maxlen = 600, truncating = 'post')
 print(padding)
 # checking the truncated longest review again
-padding[3108]
+print(padding[3108])
 # we see that the first word of the review is included in the truncated review at the top
 # showing that the truncating is now at the back.
-sequences[3108][0]
+print(sequences[3108][0])
 
 # Let's go to our slides first for a brief discussion on the layer
 
@@ -243,7 +243,7 @@ def custom_standardization(input_data):
 # if no "sep" is provided as the argument for the split function, we split according to whitespace by default
 def custom_split(input_data):
     return tf.strings.split(input_data, sep=" ")
-raw_imdb_reviews[2]
+print(raw_imdb_reviews[2])
 # note the <br /> tags
 # so now we can clean and tokenize all in one step!
 # create our TextVectorization object
@@ -266,11 +266,11 @@ text_vectorization.adapt(raw_imdb_reviews)
 vectorized_reviews = text_vectorization(raw_imdb_reviews)
 
 # finally, we see the first review
-vectorized_reviews[0]
+print(vectorized_reviews[0])
 
 # remember that the cleaning steps are already defined in my text vectorization object
 # we see that it has 600 elements for each row
-vectorized_reviews.shape
+print(vectorized_reviews.shape)
 # let's look at the vocabulary learned
 text_vectorization.vocabulary_size()
 
@@ -278,4 +278,4 @@ text_vectorization.vocabulary_size()
 # we retrieve our learned vocabulary from adapt() using the get_vocabulary() method
 vocabulary = text_vectorization.get_vocabulary()
 
-vocabulary
+print(vocabulary)
