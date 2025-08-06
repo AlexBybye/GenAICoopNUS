@@ -1,0 +1,37 @@
+[('<OOV>', 1), ('movie', 2), ('film', 3), ('not', 4), ('one', 5), ('like', 6), ('just', 7), ('good', 8), ('even', 9), ('no', 10)]
+[302, 277, 2, 24, 10210, 1206, 3385, 377, 11257, 22, 63, 119, 212, 140, 116, 370, 9, 22, 39, 4, 5348, 26, 517, 616, 2, 285, 9330, 80, 2306, 298, 1077, 54, 1, 7229, 145, 2681, 17393, 2711, 1, 19338, 1283, 4801, 1, 1431, 3385, 69, 1077, 753, 7683, 2, 3875, 59, 1105, 574, 26, 6, 7116, 63, 6, 1206, 13592, 8, 288, 1018, 716]
+[[   0    0    0 ...  288 1018  716]
+ [   0    0    0 ...   82  260    3]
+ [   0    0    0 ... 4289  310 6333]
+ ...
+ [   0    0    0 ...   21 2816    5]
+ [   0    0    0 ...    2   18 1188]
+ [   0    0    0 ... 1384 1506  559]]
+[[  302   277     2 ...     0     0     0]
+ [  490   649  2191 ...     0     0     0]
+ [ 4637  6073     1 ...     0     0     0]
+ ...
+ [  787     7    91 ...     0     0     0]
+ [  111  1314   144 ...     0     0     0]
+ [   23 17734   263 ...     0     0     0]]
+[[  302   277     2 ...     0     0     0]
+ [  490   649  2191 ...     0     0     0]
+ [ 4637  6073     1 ...     0     0     0]
+ ...
+ [  787     7    91 ...     0     0     0]
+ [  111  1314   144 ...     0     0     0]
+ [   23 17734   263 ...     0     0     0]]
+[[  302   277     2 ...     0     0     0]
+ [  490   649  2191 ...     0     0     0]
+ [ 4637  6073     1 ...     0     0     0]
+ ...
+ [  787     7    91 ...     0     0     0]
+ [  111  1314   144 ...     0     0     0]
+ [   23 17734   263 ...     0     0     0]]
+WARNING:tensorflow:From D:\conda\envs\GenAICoopNUS\lib\site-packages\keras\src\backend.py:873: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From D:\conda\envs\GenAICoopNUS\lib\site-packages\keras\src\backend.py:873: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From D:\conda\envs\GenAICoopNUS\lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From D:\conda\envs\GenAICoopNUS\lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
