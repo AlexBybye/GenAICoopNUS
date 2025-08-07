@@ -1,0 +1,71 @@
+验证准确率提升: +0.8644 (新最佳: 0.8644)
+625/625 - 15s - loss: 0.6691 - accuracy: 0.7438 - val_loss: 0.4593 - val_accuracy: 0.8644 - lr: 2.3000e-04 - 15s/epoch - 23ms/step
+Epoch 2/60
+
+验证准确率提升: +0.0182 (新最佳: 0.8826)
+625/625 - 14s - loss: 0.3750 - accuracy: 0.8895 - val_loss: 0.3524 - val_accuracy: 0.8826 - lr: 2.3000e-04 - 14s/epoch - 22ms/step
+Epoch 3/60
+
+验证准确率提升: +0.0068 (新最佳: 0.8894)
+625/625 - 14s - loss: 0.2947 - accuracy: 0.9176 - val_loss: 0.3230 - val_accuracy: 0.8894 - lr: 2.3000e-04 - 14s/epoch - 22ms/step
+Epoch 4/60
+
+验证准确率提升: +0.0028 (新最佳: 0.8922)
+625/625 - 14s - loss: 0.2499 - accuracy: 0.9334 - val_loss: 0.3086 - val_accuracy: 0.8922 - lr: 2.3000e-04 - 14s/epoch - 22ms/step
+Epoch 5/60
+
+验证准确率提升: +0.0022 (新最佳: 0.8944)
+625/625 - 14s - loss: 0.2185 - accuracy: 0.9466 - val_loss: 0.3021 - val_accuracy: 0.8944 - lr: 2.3000e-04 - 14s/epoch - 23ms/step
+Epoch 6/60
+
+验证准确率提升: +0.0002 (新最佳: 0.8946)
+625/625 - 14s - loss: 0.1944 - accuracy: 0.9556 - val_loss: 0.2994 - val_accuracy: 0.8946 - lr: 2.3000e-04 - 14s/epoch - 23ms/step
+Epoch 7/60
+
+验证准确率提升: +0.0024 (新最佳: 0.8970)
+625/625 - 15s - loss: 0.1728 - accuracy: 0.9624 - val_loss: 0.3018 - val_accuracy: 0.8970 - lr: 2.3000e-04 - 15s/epoch - 23ms/step
+Epoch 8/60
+
+验证准确率提升不足: +-0.0024 < 0.0050 (第1/15轮)
+625/625 - 14s - loss: 0.1552 - accuracy: 0.9698 - val_loss: 0.3042 - val_accuracy: 0.8946 - lr: 2.3000e-04 - 14s/epoch - 22ms/step
+Epoch 9/60
+
+Epoch 9: ReduceLROnPlateau reducing learning rate to 0.00011500000255182385.
+
+验证准确率提升不足: +-0.0050 < 0.0050 (第2/15轮)
+625/625 - 14s - loss: 0.1402 - accuracy: 0.9736 - val_loss: 0.3072 - val_accuracy: 0.8920 - lr: 2.3000e-04 - 14s/epoch - 22ms/step
+Epoch 10/60
+
+验证准确率提升不足: +-0.0052 < 0.0050 (第3/15轮)
+625/625 - 14s - loss: 0.1245 - accuracy: 0.9809 - val_loss: 0.3140 - val_accuracy: 0.8918 - lr: 1.1500e-04 - 14s/epoch - 23ms/step
+Epoch 11/60
+
+验证准确率提升不足: +-0.0068 < 0.0050 (第4/15轮)
+625/625 - 15s - loss: 0.1182 - accuracy: 0.9824 - val_loss: 0.3154 - val_accuracy: 0.8902 - lr: 1.1500e-04 - 15s/epoch - 24ms/step
+Epoch 12/60
+
+Epoch 12: ReduceLROnPlateau reducing learning rate to 5.750000127591193e-05.
+
+验证准确率提升不足: +-0.0060 < 0.0050 (第5/15轮)
+625/625 - 14s - loss: 0.1112 - accuracy: 0.9853 - val_loss: 0.3188 - val_accuracy: 0.8910 - lr: 1.1500e-04 - 14s/epoch - 23ms/step
+Epoch 13/60
+
+验证准确率提升不足: +-0.0072 < 0.0050 (第6/15轮)
+625/625 - 20s - loss: 0.1053 - accuracy: 0.9866 - val_loss: 0.3206 - val_accuracy: 0.8898 - lr: 5.7500e-05 - 20s/epoch - 32ms/step
+Epoch 14/60
+
+验证准确率提升不足: +-0.0080 < 0.0050 (第7/15轮)
+625/625 - 23s - loss: 0.1017 - accuracy: 0.9882 - val_loss: 0.3228 - val_accuracy: 0.8890 - lr: 5.7500e-05 - 23s/epoch - 36ms/step
+
+==================================================
+在测试集上评估最佳模型
+==================================================
+使用ModelCheckpoint保存的最佳模型
+782/782 [==============================] - 1s 1ms/step - loss: 0.3331 - accuracy: 0.8801
+
+测试集评估结果:
+- 损失: 0.3331
+- 准确率: 0.8801
+- 最佳验证准确率: 0.8970 (epoch 6)
+
+进程已结束，退出代码为 0
